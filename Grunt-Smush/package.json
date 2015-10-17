@@ -1,0 +1,13 @@
+{
+  "name": "test-smush",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt qunit"
+  },
+  "devDependencies": {
+    "grunt-smushit": "^1.0.0"
+  }
+}
