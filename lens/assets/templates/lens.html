@@ -1,0 +1,104 @@
+<!--Analytics Lens Template -->
+<ul class="tab">
+    <li class="active" data-type="keys" data-tab="keystat">Key Stats</li>
+    <li data-type="trends" data-tab="trendstat">Trend Analyses</li>
+    <li data-type="category" data-tab="catstat">Category Analyses</li>
+</ul>
+<div id="lens-print" class="lens">
+    <div class="keystat">
+        <div class="timeline">
+            <div class="title">Offer Timeline</div>
+            <div class="totalDays"><%= response.offerInfo.totalDays %> days total</div>
+            <ul>
+                <li>
+                    <span class='date'><%= response.offerInfo.startDate %></span>
+                    <div class='point'></div>
+                    <div class='content' style="width: <%= response.offerInfo.length1 %>px"></div>
+                </li>
+                <% if (response.offerInfo.remainDays) { %>
+                <li class="dayleft">
+                    <span class='date'></span>
+                    <div class='point'></div>
+                    <div class='content' style="width: <%= response.offerInfo.length2 %>px"><%= response.offerInfo.remainDays %>+ day(s) left</div>
+                </li>
+                <% } %>
+                <div class='point'></div>
+                <span class='date'><%= response.offerInfo.endDate %></span>
+            </ul>
+        </div>
+        <div class="offer-info">
+            <div class="section1">
+                <div class="title">Offer Info</div>
+                <img width="80px" height="100px" src="<%= response.offerInfo.imgURL %>">
+                <ul>
+                    <li><span>Coupon ID:</span><span><%= response.offerInfo.cid %></span></li>
+                    <li><span>Offer Type:</span><span><%= response.offerInfo.type %></span></li>
+                    <li><span>Expiration:</span><span><%= response.offerInfo.expDate %></span></li>
+                    <li><span>IO:</span><span><%= response.offerInfo.ioId %></span></li>
+                    <li><span>OCR:</span><span><%= response.offerInfo.ocrId %></span></li>
+                </ul>
+            </div>
+            <div class= "section2">
+                <div class="title">Offer Attributes</div>
+                <ul>
+                    <li><em>Brand:</em></li>
+                    <li><span><%= response.offerInfo.brand %></span></li>
+                    <li class=category>
+                        <em>Category:</em>
+                        <ul>
+                            <li class="l1"><%= response.offerInfo.catdescl1 %></li>
+                            <li class="l2"><%= response.offerInfo.catdescl2 %></li>
+                            <li class="l3"><%= response.offerInfo.catdescl3 %></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="perf-info">
+            <div class="activation">
+                <div class="title">Activations</div>
+                <ul class="activation-data">
+                    <li><span>Activations Limit:</span><span><%= response.offerInfo.activationLimit %></span></li>
+                    <li><span>Activations to Date:</span><span class="fulfill"><%= response.perfInfo.aggrActivations %></span></li>
+                    <li class="act-left"><span>% Remaining:</span><span class="remaining"><%= response.offerInfo.actLimitPct %>%</span></li>
+                </ul>
+                <div class="activation-chart"></div>
+                <div class="chart-title">% Activations</div>
+            </div>
+            <div class="ctrview">
+                <div class="title">Performance</div>
+                <ul class="ctrview-data">
+                    <li><span>Current Velocity:</span><span><%= response.perfInfo.velocity %></span></li>
+                    <li><span>Average Page:</span><span><%= response.perfInfo.aggrAvgPage %></span></li>
+                    <li class="hint">(page max is ~20)</li>
+                    <li class="ctr"><span>Click-through Rate:</span><span><%= response.perfInfo.ctr %>%</span></li>
+                </ul>
+                <div class="ctrview-chart"></div>
+                <div class="chart-connect"></div>
+            </div>
+        </div>
+    </div>
+    <div class="trendstat hidden">
+        <span class="view-more activation-expand" data-type="activation"></span>
+        <div class="trend-activation"></div>
+        <span class="view-more velocity-expand" data-type="velocity"></span>
+        <div class="trend-velocity"></div>
+        <span class="view-more pageplacement-expand" data-type="pageplacement"></span>
+        <div class="trend-pageplacement"></div>
+        <span class="view-more ctr-expand" data-type="ctr"></span>
+        <div class="trend-ctr"></div>
+    </div>
+    <div class="catstat hidden">&nbsp;&nbsp;&nbsp;Coming soon...</div>
+    <div class="overlay-chart hidden">
+        <a class="view-less">&lsaquo;&lsaquo; Back</a>
+        <div class="expand-chart"></div>
+    </div>
+</div>
+<div class="lens-footer">
+    <span class="timestamp">Last Updated: <span><%= response.lastModified %></span></span>
+    <span class="confidential">CI Internal Use Only</span>
+    <span class="utility">
+        <a class="print">Print</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a class="help" target="_blank" href="https://jira.corp.coupons.com/confluence/display/PM/Lens+Help+Guide">Help</a>
+    </span>
+</div>

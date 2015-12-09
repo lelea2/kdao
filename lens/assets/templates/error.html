@@ -1,0 +1,7 @@
+<% if(zip) { %>
+    <div>We are sorry. There are currently no coupons in zipcode <%= zip %>. Please check back later</div>    
+<% } else if (q) { %>
+    <div>We are sorry. There are currently no coupons for search term "<%= q %>". Please check back later.</div>    
+<% } else { %>
+    <div>Oopss! Inspect Overloadeded! Please check back later.</div>
+<% } %>

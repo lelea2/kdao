@@ -1,0 +1,59 @@
+/** Dialog css **/
+.ui-widget-overlay {
+    /* modal dialog shim layer */
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+.flyout-outer {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    position: absolute;
+    z-index: 100;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 3px solid #cdcdcd;
+}
+.flyout-outer:focus {
+    border: 3px solid #cdcdcd;
+}
+.flyout-outer .ui-dialog-titlebar .ui-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #555;
+    color: #fff;
+    border: 0 none;
+    cursor: pointer;
+    top: -10px;
+    position: absolute;
+    right: -10px;
+    outline: 0 none;
+    z-index: 3;
+}
+.flyout-outer .ui-dialog-titlebar .ui-button span {
+    font-size: 153.8%;
+    padding: 0;
+    line-height: 26px;
+    text-align: center;
+}
+.flyout-outer ul {
+    list-style-type: none;
+}
+/**Right now, there is no definition for printing yet. Therefore, just hack it up for the first dialog, this eventually will need to move to a page level **/
+@media print {
+    .flyout-outer {
+        position: relative;
+        top: 10px !important;
+        left: 20px !important;
+    }
+    .flyout-outer .ui-dialog-titlebar .ui-button {
+        display: none;
+    }
+}

@@ -1,0 +1,211 @@
+body {
+    background: none repeat scroll 0 0 #FCFCF9;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important; /**Overwrite any other font**/
+}
+.hidden {
+    display: none;
+}
+.header {
+    width: 100%;
+    height: 85px;
+    font-size: 14px;
+    background-color: #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-bottom: 1px solid #E8E8E8;
+}
+.header-container {
+    width: 980px;
+    margin: auto;
+}
+.header a.home {
+    text-decoration: none;
+    background-image: url("../../assets/images/lens2.png");
+    margin-top: -10px;
+    line-height: 68px;
+    background-repeat: no-repeat;
+    float: left;
+    font-size: 12px;
+    color: #444;
+    padding: 10px 0 0 117px;
+    width: 235px;
+    height: 60px;
+}
+.header h1 {
+    float: left;
+}
+.header .confidential {
+    float: right;
+    margin: 15px 50px 0 0;
+    font-size: 13px;
+    color: #D33820;
+    font-weight: bold;
+}
+.header .confidential span {
+    color: #444;
+}
+.header .confidential a {
+    text-decoration: none;
+    color: #08B4DF;
+}
+.header .confidential a:hover {
+    text-decoration: underline;
+}
+/**Gallery container**/
+.container {
+    margin: 120px auto 0 auto;
+    width: 980px;
+}
+#gallery {
+    margin: auto;
+    clear: both;
+}
+#gallery .loading-indicator img {
+    margin: 150px auto;
+    display: block;
+}
+#gallery h2 {
+    color: #08B4DF;
+    font-size: 23px;
+    font-weight: bold;
+    display: block;
+    clear: both;
+}
+
+/**Pod css**/
+.pod {
+    background-color: #FFFFFF;
+    border: 1px solid #cdcdcd;
+    box-shadow: 0 -4px 0 #E8E8E8 inset;
+    float: left;
+    margin: 0 20px 20px 0;
+    height: 158px;
+    width: 298px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+}
+.pod .left {
+    float: left;
+    height: 100%;
+}
+.pod img {
+    margin: 10px;
+    display: block;
+    float: left;
+}
+.pod .left span {
+    font-size: 10px;
+    display: block;
+    color: #999;
+    margin-left: 10px;
+    font-style: italic;
+}
+.main .pod .left span {
+    display: none;
+}
+.pod ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    line-height: 1.231;
+}
+.pod .summary {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #08b4df;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.pod .brand {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #444;
+    font-size: 16px;
+}
+.pod .detail {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    color: #777;
+    font-size: 13px;
+    line-height: 16px;
+}
+.pod button {
+    cursor: url('../../assets/images/zoom_in.png'), auto;
+    background-color: #eee;
+    border: 3px solid #7DBD1F;
+    border-radius: 3px;
+    bottom: 9px;
+    color: #444;
+    height: 25px;
+    position: absolute;
+    font-weight: bold;
+    right: 5px;
+    z-index: 1;
+}
+/** Search Box **/
+.searchbox {
+    float: right;
+    margin: 10px 50px 0 0;
+}
+.zipbox {
+    float: left;
+    margin: 42px 0 0 45px;
+}
+.searchbox input {
+    width: 270px;
+    height: 30px;
+}
+.zipbox input {
+    width: 110px;
+    height: 30px;
+}
+.searchbox button,
+.zipbox button {
+    height: 29px;
+    background-color: #099FDF;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+/** Feedback tab **/
+.feedback {
+    background: #8FC73D;
+    border: 1px solid #628E27;
+    border-radius: 6px 6px 0 0;
+    bottom: 0;
+    height: 20px;
+    padding: 10px 0 7px;
+    position: fixed;
+    right: -40px;
+    top: 233px;
+    -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+}
+.feedback a {
+    background-color: transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/**Printing css **/
+@media print {
+    .header {
+        display: none;
+    }
+    .container {
+        display: none;
+    }
+}

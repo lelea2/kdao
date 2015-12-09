@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>LENS | Coupons.com | Search</title>
+    <link rel="icon" href="//cdn.cpnscdn.com/www.coupons.com/favicon.ico">
+    <!--<link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/dialog.css">
+    <link rel="stylesheet" href="assets/css/lens.css">-->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body>
+    <!-- Static header -->
+    <div class="header navbar">
+        <div class="header-container">
+        <h1>
+            <a class="home" href="/">
+                Your view into offer data
+            </a>
+        </h1>
+        <span class="confidential">CI Internal Use Only&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;<a target="_blank" href="https://jira.corp.coupons.com/confluence/display/PM/Lens+Help+Guide" class="help">Help</a>&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;<a href="/logout.php">Log Out</a></span>
+        <form class="zipbox" action="index.php">
+            <input id="#zip" type="text" name="zip" maxlength="5" placeholder="Search by zip">
+            <button type="submit">Go</button>
+        </form>
+        <form class="searchbox" action="search.php">
+            <input id="#search" type="text" name="q" placeholder="Search by CID, Brand, OCR, IO or keyword">
+            <button type="submit">Search</button>
+        </form>
+        </div>
+    </div>
+
+    <!--GALLERY -->
+    <div class="container search">
+        <!--Gallery -->
+        <div id="gallery">
+            <div class="loading-indicator">
+                <img width="32" height="32" src="http://cdn.cpnscdn.com/static.coupons.com/Sites/img/bigblue/spinner.gif">
+            </div>
+        </div>
+        <!--<button type="button" class="btn btn-show-more">Show More Coupons</button>-->
+        <div class="feedback">
+            <a href="mailto:lens-support@couponsinc.com">Feedback</a>
+        </div>
+    </div>
+    <div class="dialog hidden"></div>
+    <!-- Load script  "js/main.js" as our entry point -->
+    <!--<script data-main="assets/js/main" src="assets/js/lib/require.js"></script>-->
+    <script src="assets/js/script.min.js"></script>
+    <!-- GA tag -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-46569701-5', 'coupons.com');
+    ga('send', 'pageview');
+    </script>
+</body>
+</html>
