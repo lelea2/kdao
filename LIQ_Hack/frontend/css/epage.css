@@ -1,0 +1,75 @@
+ul {
+    list-style-type: none;
+}
+.mod-epage {
+    width: 680px;
+    height: 180px;
+    overflow: hidden;
+}
+.sprite-icon {
+    background-image: url("//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/sprite_icon_27.png");
+    width: 40px;
+    height: 38px;
+    position: absolute;
+    top: 69px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+}
+.sprite-icon.arrow-left {
+    background-position: 25px -1107px;
+    left: 0;
+}
+.sprite-icon.arrow-right {
+    background-position: 25px -1150px;
+    left: 600px;
+}
+.gallery {
+    float: left;
+    display: inline-block;
+    margin: 0 40px;
+}
+.pod {
+    border: 1px solid #cdcdcd;
+    float: left;
+    height: 160px;
+    width: 270px;
+    padding: 5px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 6px;
+    margin: 10px;
+}
+.pod.added {
+    opacity: 0.4;
+}
+.pod .left {
+    margin: 5px;
+    float: left;
+}
+.pod ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    line-height: 1.231;
+}
+.pod .summary {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #08b4df;
+    text-transform: uppercase;
+}
+.pod .brand {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #444;
+}
+.pod .detail {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    color: #777;
+    font-size: 13px;
+    line-height: 16px;
+}
+.pod button {
+    display: none;
+}

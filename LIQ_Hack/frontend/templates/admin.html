@@ -1,0 +1,72 @@
+<div class="header navbar">
+    <img alt="Coupons.com" width="79" height="36" src="//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/coupons-logo_79x36_v2.png">
+    <h1>Create uList Widget for your site</h1>
+</div>
+<div class="container admin">
+    <div class="left">
+        <div class="widgetform">
+            <div class="region">
+                <p>1. Select Widget Size:</p>
+                <span><input type="radio" name="widgetsize" value="320x300">320x300</span>
+                <span><input type="radio" name="widgetsize" value="600x500" checked>600x500</span>
+            </div>
+            <div class="region">
+                <p>2. Select Display Format:</p>
+                 <span><input type="radio" name="cs" value="grid" checked>Grid</span>
+                <span><input type="radio" name="cs" value="list">List</span>
+            </div>
+            <div class="region">
+                <p>3. Select Coupon Type:</p>
+                <span><input type="radio" name="couponsource" value="cpr" checked>Printable</span>
+                <span><input type="radio" name="couponsource" value="riq">Digital</span>
+                <div class="riqlist hidden">
+                    <img src="//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/coupons-logo_79x36_v2.png">
+                    <ul class="riqconfig">
+                        <li>Choose your store:</li>
+                        <li><input type="radio" name="storename" value="dg" checked>Dollar General</li>
+                        <li><input type="radio" name="storename" value="wg">Walgreens</li>
+                        <li><input type="radio" name="storename" value="marsh">Marsh</li>
+                        <li><input type="radio" name="storename" value="heb">Heb</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="region region-search">
+                <p>4. Display Search Box:</p>
+                <span><input type="radio" name="search" value="yes" checked>Yes</span>
+                <span><input type="radio" name="search" value="no">No</span>
+                <div class="staticlist hidden">
+                    <div class="listconfig">
+                        Configure your items:
+                        <input type="text" name="listitem" placeholder="Enter your list item">
+                    </div>
+                </div>
+            </div>
+            <div class="region region-brand">
+                <p>5. Display Popular Brands:</p>
+                <span><input type="radio" name="branddisplay" value="yes" checked>Yes</span>
+                <span><input type="radio" name="branddisplay" value="no">No</span>
+            </div>
+            <div class="region">
+                <p>6. Configure Wiget Title: </p>
+                <input type="text" name="title" placeholder="Enter your widget header">
+            </div>
+            <div class="region">
+                <p>7. Choose Color Theme: </p>
+                <span>Theme color: <input type="text" name="colortheme" class="colorpicker" data-control="hue" value="#ff6161"></span>
+                <span>Text color:  <input type="text" name="colortext" class="colortext" data-control="hue" value="#ffffff"></span>
+            </div>
+            <div class="region">
+                <button type="submit">Save</button>
+            </div>
+        </div>
+        <div class="preview region">
+            <p>Please copy this snippet code to enable widget on your site</p>
+            <textarea readonly="readonly"></textarea>
+        </div>
+    </div>
+    <div class="right">
+        <iframe scrolling="no" frameborder="0" style="padding: 20px;height: 700px; width: 700px" src=""></iframe>
+    </div>
+</div>
+<!-- Load script  "js/main.js" as our entry point -->
+<script data-main="frontend/js/main" src="frontend/js/lib/require.js"></script>

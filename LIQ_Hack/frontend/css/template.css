@@ -1,0 +1,184 @@
+body {
+    background: transparent;
+}
+ul {
+    list-style: none;
+}
+.hidden {
+    display: none;
+}
+.widget {
+    border: 1px solid #cdcdcd;
+    border-radius: 6px;
+    background: #fcfcf9;
+    overflow: hidden;
+}
+.widget h1 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
+    margin: 0;
+    line-height: 40px;
+}
+.container {
+    padding: 0 20px;
+}
+.container h3 {
+    font-size: 16px;
+    color: #444;
+}
+.widget .logo {
+    float: right;
+    margin-top: -55px;
+}
+.riq.widget .logo {
+    margin-top: 7px;
+}
+.widget .template_320x300 .logo {
+    margin: 0;
+}
+.widget.riq .brands {
+    display: none;
+}
+.widget .brands ul {
+    vertical-align: top;
+    width: 30%;
+    color: #444;
+    display: inline-block;
+    clear: both;
+}
+.widget .brands ul a {
+    color: #444;
+}
+.container .search {
+    margin-bottom: 15px;
+}
+.container.template_320x300 .search {
+    margin: 10px 0;
+}
+.search-no .search {
+    display: none;
+}
+.list input[type=text] {
+    border: 1px solid #CDCDCD;
+    border-radius: 2px;
+    font-size: 16px;
+    height: 30px;
+    padding-left: 4px;
+    width: 320px;
+}
+.template_320x300 .list input[type=text] {
+    width: 180px;
+}
+.liq button {
+    background: #08B4DF;
+    border: medium none;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+}
+.liq .badge {
+    background: transparent;
+    color: #444;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -83px;
+    text-decoration: underline;
+    padding: 5px;
+    cursor: pointer;
+}
+.riq .liq .badge {
+    float: none;
+    margin: 7px 0;
+}
+.liq.template_320x300 .badge {
+    float: none;
+    margin-top: 20px;
+}
+.template_600x500 .gallery-view {
+    border: 1px solid #eee;
+    border-radius: 2px;
+    display: block;
+    height: 51%;
+    overflow: auto;
+    width: 100%;
+}
+.riq .template_600x500 .gallery-view {
+    height: 73%;
+}
+.template_320x300 .gallery-view {
+    border: 1px solid #eee;
+    border-radius: 2px;
+    display: block;
+    height: 54%;
+    overflow: auto;
+    width: 100%;
+    margin-top: 10px;
+}
+.loading-indicator {
+    margin-top: 115px;
+    text-align: center;
+}
+.pod {
+    border: 1px dashed #eee;
+    float: left;
+    height: 160px;
+    width: 270px;
+    padding: 5px;
+    cursor: pointer;
+    background: #fff;
+}
+.pod.added {
+    opacity: 0.4;
+}
+.pods_list .pod {
+    height: 100px;
+    width: 100%;
+}
+.pod .left {
+    margin: 5px;
+    float: left;
+}
+.pod ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    line-height: 1.231;
+}
+.pod .summary {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #08b4df;
+    text-transform: uppercase;
+}
+.pod .brand {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    color: #444;
+}
+.pod .detail {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    color: #777;
+    font-size: 13px;
+    line-height: 16px;
+}
+.template_320x300 .pod .detail {
+    display: none;
+}
+.pod button {
+    float: right;
+    height: 20px;
+    font-size: 13px;
+}
+.liq .segment {
+    font-weight: bold;
+    margin: 5px;
+    clear: both;
+    display: block;
+}
