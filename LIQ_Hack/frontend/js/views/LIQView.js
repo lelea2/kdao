@@ -26,10 +26,10 @@ define([
         },
 
         riqObj: {
-            "dg": ["http://vdevusvr79.corp.coupons.com/prototypes/LIQ/frontend/img/dollar_general.jpg", "#050505", "#dbdb58"],
-            "wg": ["http://vdevusvr79.corp.coupons.com/prototypes/LIQ/frontend/img/walgreen.jpg", "#eb3434", "#ededed"],
-            "marsh": ["http://vdevusvr79.corp.coupons.com/prototypes/LIQ/frontend/img/marsh.jpg", "#e01b1b", "#ffffff"],
-            "heb": ["http://vdevusvr79.corp.coupons.com/prototypes/LIQ/frontend/img/heb.jpg", "#e83a3a", "#ffffff"]
+            "dg": ["../img/dollar_general.jpg", "#050505", "#dbdb58"],
+            "wg": ["../img/walgreen.jpg", "#eb3434", "#ededed"],
+            "marsh": ["../img/marsh.jpg", "#e01b1b", "#ffffff"],
+            "heb": ["../img/heb.jpg", "#e83a3a", "#ffffff"]
         },
 
         initialize: function() {
