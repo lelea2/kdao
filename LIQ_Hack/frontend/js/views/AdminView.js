@@ -77,7 +77,7 @@ define([
                 color = encodeURIComponent($("input[name=colortheme]").val()),
                 textcolor = encodeURIComponent($("input[name=colortext]").val());
                 embeddedURL = "",
-                url = "http://vdevusvr79.corp.coupons.com/prototypes/LIQ/?size=" + size + "&color=" + color + "&tc=" + textcolor + "&b=" + brand + "&c=" + style  + "&t=" + title + "&s=" + s + "&source=" + source;
+                url = "{localhost}/?size=" + size + "&color=" + color + "&tc=" + textcolor + "&b=" + brand + "&c=" + style  + "&t=" + title + "&s=" + s + "&source=" + source;
             if (s === "no" && listitem !== "" && source === "cpr") {
                 url += "&i=" + listitem;
             }
