@@ -1,4 +1,4 @@
 # kdao
-Testing stuffs
+Collections of my personal prototypes for works, hackathon and personal project
 
--- Maintain as my playground, for not a prototype, but more experienments and learning ...
+This place is maintained as my main playground, where I experience with "stuffs" and might go a little crazie :)
