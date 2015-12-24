@@ -1,6 +1,6 @@
 #### LENS
 
-My hack project that wond 1st place in Coupons.com hack
+My hack project that won 1st place in Coupons.com hack
 
 * Backbone.js
 * Requirejs
