@@ -54,3 +54,7 @@ var Demo = React.createClass({
         );
     }
 });
+
+//Rendering on DOM
+ReactDOM.render(<Demo />, document.getElementById('container'));
+

@@ -14,3 +14,6 @@ var Demo = React.createClass({
         );
     }
 });
+
+//Rendering Component to DOM
+ReactDOM.render(<Demo />, document.getElementById('container'));
