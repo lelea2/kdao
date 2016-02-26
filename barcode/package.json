@@ -1,0 +1,23 @@
+{
+  "name": "qrcode-test",
+  "version": "1.0.0",
+  "description": "Experiment rendering QRCode",
+  "license": "proprietary",
+  "main": "server.js",
+  "scripts": {
+    "test": "grunt test",
+    "start": "node couponscom-riq-services.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.3.1",
+    "body-parser": "^1.11.0",
+    "express": "^4.3.0",
+    "express-enrouten": "^1.2.0",
+    "qr-image": "^3.1.0"
+  },
+  "devDependencies": {
+  }
+}
