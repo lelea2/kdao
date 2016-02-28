@@ -1,0 +1,62 @@
+- Closure concept:
+-- Block Scope
+Ex: Scheme/Racket(dynamic scope, nested function and funtion values concept)
+Prob: Inner surive the outers (like stack vs. heap concept in Js)
+
+-- Global concept hell,
+    ex: 
+    var digit = (function() {
+        var names = [];
+		return function (n) {
+		    return names[n];
+		}
+	}());
+	
+-- currying concept (6th edition)
+function curry(func, ...first) {
+    return function(...second) {
+	    return func(...first, ...second);
+	}
+}
+ex: var inc = curry(add, 1);
+    inc(5);
+	inc(inc(5));
+
+function switcheroo(func) {
+    return function (...args) {
+	    return func(...(args.reverse()));
+	};
+}
+==============================================================
+function log(arg) {
+    console.log(arg);
+}
+function identity(x) {
+    return x;
+}
+//log(identity(3));
+function funky(o) {
+    o = null;
+}
+var x= [];
+funky(x);
+log(x);
+
+
+function swap(a,b) {
+    var temp = a;
+    a = b;
+    b = temp;
+
+}
+swap(x, y);
+=====================================================================
+
+
+
+
+
+
+
+
+
