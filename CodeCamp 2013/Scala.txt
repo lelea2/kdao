@@ -1,0 +1,60 @@
+Functional programming ideas
+Ex:
+object Hello extends App { //Using scala app straigt
+  println("Hello, World!")
+}
+
+//Scala with setter/getter concept
+class Person(val first: String, val last: String); //val as Java final, variable accessible 
+val p = new Person("Khanh", "Dao");
+println(p.first);
+
+//Inherit
+class Student (first: String, last: String, val grade: Int) extend Person(first, last)
+val s = new Student("Khanh", "Dao", 1);
+s.first;
+s.last;
+s.grade;
+
+//Defining methods
+class Person(val first: String, val last: String) {
+    def name = first + "" + last;
+	override def toString = name; //required override method, defer watever type the previous obj get..--- ehhh
+}
+//def ---> val
+class Person(val first: String, val last: String) {
+    val name = first + "" + last;
+	override def toString = name; //required override method, defer watever type the previous obj get..--- ehhh
+}
+//Traits: Interface 
+trait PartyGoer {
+    val age: Int;
+	val yearsUnitlLegalDrinking = 
+	    if (age >=21) 0 else 21-age
+}
+//Collections:
+val people = List("John", "Jacob", "Mich");
+val firstPerson = people(0);
+println(firstPerson); //John
+for(person <- people if person startsWith "J") {
+    println(person); (""" in scala
+	println(s"""adgagdag "J" $person""");
+}
+
+//Colletions-- filter
+val firstGraders = student.filter (s => s.grade === 1)
+                 = student.filter(_.grade === 1);
+//Collection -- partition
+val (elemSchooler, middleSchooler) = students.partition(_.grade < 6)
+ student.map(_.firstName); //getting from list and return list of String just containing first Name.
+ 
+//Map
+val studentSchools = Map(student1 -> "A",
+                         student2 -> "B");
+studentSchools.map(student1);
+
+//Pattern matching: basics
+//Destutter using pattern (not repeating elem in list)
+
+//Regular experession
+==>flattern concept 

@@ -1,0 +1,19 @@
+https://github.com/iroy2000/backbone-tutorial (Roy Yu)
+http://iroylab.blogspot.com
+Backbone component: 
+- Events (on, off, bind, unbind, trigger, ...)
+- Router (router path to JS funnction)
+- View
+- Model
+- Collection
+- History (part of backbone routing system, browser back button concept)
+
+Require JS (AMD style)
+define(['models/TestColection, /view/TestListView'], function(TestCollection, TestListView) {
+          function() {
+		  //some code here
+		  }
+		  _.extend()
+});
+r.js==> optimize using Node. 
+SPA: make sure we are careful with object "binding" ==> might create unexpected memory leaks (garbage collextion)
