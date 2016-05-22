@@ -1,0 +1,16 @@
+{
+  "name": "passport-azure-ad-login-wsfed",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.x",
+    "ejs": ">= 0.0.0",
+    "ejs-locals": ">= 0.0.0",
+    "adal-node": "0.1.19",
+    "connect-logger": "0.0.1",
+    "cookie-session": "^1.0.0",
+    "cookie-parser": "^1.0.0"
+  }
+}
