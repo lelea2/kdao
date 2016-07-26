@@ -1,0 +1,35 @@
+{
+  "name": "react-seo-prototype",
+  "version": "0.0.0",
+  "description": "Isomorphic React Example",
+  "main": "app.js",
+  "author": "Khanh Dao",
+  "scripts": {
+    "watch": "watchify public/js/app.js -o build/js/bundle.js -v",
+    "browserify": "browserify public/js/app.js | uglifyjs > build/js/bundle.js",
+    "build": "npm run browserify",
+    "start": "npm install"
+  },
+  "dependencies": {
+    "express": "^4.0.0",
+    "express-handlebars": "^3.0.0",
+    "express-enrouten": "^1.0.0",
+    "node-jsx": "^0.11.0",
+    "bluebird": "^3.3.4",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.8",
+    "bootstrap-less": "^3.3.8"
+  },
+  "devDependencies": {
+    "browserify": "^6.0.3",
+    "nodemon": "^1.2.1",
+    "reactify": "^0.14.0",
+    "uglify-js": "^2.4.15",
+    "watchify": "^3.1.1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
