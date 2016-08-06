@@ -1,0 +1,76 @@
+body {
+	background: #CCC;
+	font-family: Menlo, Helvetica, sans-serif;
+	color: #FFF;
+}
+
+.container, .controls, .boxes { position: absolute; }
+
+.container {
+	top: 50px;
+	left: 50px;
+	right: 50px;
+	bottom: 50px;
+}
+
+.controls {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 27%;
+	padding: 5% 2%;
+	background: #1868D0;
+}
+
+.controls li {
+	margin: 0 0 40px 0;
+}
+
+.controls button,
+.controls input {
+	font-family: Menlo, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+.controls button {
+	position: relative;
+	background: rgba(0, 0, 0, 0.5);
+	border: none;
+	color: rgba(255, 255, 255, 0.5);
+	padding: 10px 20px;
+	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.controls button:hover { cursor: pointer; }
+
+.controls button:active {
+	top: 5px;
+	left: 5px;
+	box-shadow: none;
+}
+
+.controls input {
+	width: 30px;
+	padding: 8px 5px;
+	text-align: center;
+	border: 2px solid #000;
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.boxes {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+	padding: 5%;
+	background: #FD1681;
+	overflow: scroll;
+}
+
+.box {
+	background: rgba(0, 0, 0, 0.5);
+	width: 110px;
+	height: 110px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
