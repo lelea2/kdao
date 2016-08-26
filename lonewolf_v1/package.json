@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "lone-wolf": "latest"
+  }
+}
