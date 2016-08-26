@@ -1,3 +1,6 @@
+//OData reference:
+// https://olingo.apache.org/doc/odata4/tutorials/sqo_tcs/tutorial_sqo_tcs.html
+
 'use strict';
 
 require('dotenv').load();
@@ -67,16 +70,15 @@ function getFilterTransaction(id) {
   // var uri ="/wolfconnect/transactions/v1/?$filter=Tiers/any(x:x/AgentCommissions/any(y:y/AgentId eq '1SwCrKcLarAU1ZXAtfjVsg=='))";
   // var uri = "/wolfconnect/transactions/v1/?$filter=MLSAddress";///any(x:x/StreetNumber eq '40')"; //and MLSAddress/any(x:x/StreetNumber eq 'Darrell') and MLSAddress/any(x:x/PostalCode eq '94133')";
   // var uri = '/wolfconnect/transactions/v1/?$filter=MLSNumber eq \'' + id + '\'))';
-  var uri = "/wolfconnect/transactions/v1/?$filter=PropertyTypeId eq 'fKD8mXfU1A2T_au0PwN9vw==')";
   var url = CONFIG.HOST + uri;
   var options = {
     headers: util.generateLWHeader(uri, 'GET')
   };
   needle.get(url, options, function(error, response) {
     if (!error && response.statusCode === 200 && response.body) {
-      console.log(response);
+      // console.log(response);
       console.log(">>>>>>>>>>>>>>>>> Response length: " + response.body.length + "<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-      // console.log(response.body);
+      console.log(response.body);
     } else {
       console.log(response);
       console.log('err=', error);
@@ -101,6 +103,6 @@ function deleteTransaction(transactionId) {
 }
 
 // getUser({params: {id: 'all'}}, context);
-// getTransactions(null, context);
-getFilterTransaction('443624');
+getTransactions(null, context);
+// getFilterTransaction('443624');
 // deleteTransaction("9Eo50Z7i3cY6HQdyKyeSTA==");
