@@ -13,8 +13,54 @@ var api = new LoneWolf({
 //   console.log(result);
 // });
 
-api.deleteTransaction("BOkzznAH6GxqgukyrYk-Lw==").then(function(result) {
+// api.deleteTransaction("BOkzznAH6GxqgukyrYk-Lw==").then(function(result) {
+//   console.log(result);
+// }, function(err) {
+//   console.log(err);
+// });
+
+
+// api.getClassifications().then(function(result) {
+//   var arr = [];
+//   if (result.length > 0) {
+//     for (var i = 0; i < result.length; i++) {
+//       if (!!result[i].LWCompanyCode) {
+//         arr.push(result[i]);
+//       }
+//     }
+//     console.log(">>>>>>>>>>>>>>>> Classification <<<<<<<<<<<<<<<<<<");
+//     console.log(arr);
+//   }
+// });
+
+
+// api.getPropertyTypes().then(function(result) {
+//   var arr = [];
+//   if (result.length > 0) {
+//     for (var i = 0; i < result.length; i++) {
+//       if (!!result[i].LWCompanyCode) {
+//         arr.push(result[i]);
+//       }
+//     }
+//     console.log(">>>>>>>>>>>>>>>> Property Type <<<<<<<<<<<<<<<<<<");
+//     console.log(arr);
+//   }
+// });
+
+// api.getContactTypes().then(function(result) {
+//   var arr = [];
+//   if (result.length > 0) {
+//     for (var i = 0; i < result.length; i++) {
+//       if (!!result[i].LWCompanyCode) {
+//         arr.push(result[i]);
+//       }
+//     }
+//     console.log(">>>>>>>>>>>>>>>> Contact Type <<<<<<<<<<<<<<<<<<");
+//     console.log(arr);
+//   }
+// });
+
+
+api.getTransactions().then(function(result) {
   console.log(result);
-}, function(err) {
-  console.log(err);
 });
