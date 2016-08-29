@@ -69,7 +69,7 @@ function getTransactions(event, context) {
 function getFilterTransaction(id) {
   // var uri ="/wolfconnect/transactions/v1/?$filter=Tiers/any(x:x/AgentCommissions/any(y:y/AgentId eq '1SwCrKcLarAU1ZXAtfjVsg=='))";
   // var uri = "/wolfconnect/transactions/v1/?$filter=MLSAddress";///any(x:x/StreetNumber eq '40')"; //and MLSAddress/any(x:x/StreetNumber eq 'Darrell') and MLSAddress/any(x:x/PostalCode eq '94133')";
-  // var uri = '/wolfconnect/transactions/v1/?$filter=MLSNumber eq \'' + id + '\'))';
+  // var uri = '/wolfconnect/transactions/v1/?$filter=CloseDate eq \'' + '2016-08-30' + '\'))';
   var url = CONFIG.HOST + uri;
   var options = {
     headers: util.generateLWHeader(uri, 'GET')
@@ -103,6 +103,6 @@ function deleteTransaction(transactionId) {
 }
 
 // getUser({params: {id: 'all'}}, context);
-getTransactions(null, context);
-// getFilterTransaction('443624');
+// getTransactions(null, context);
+getFilterTransaction('443624');
 // deleteTransaction("9Eo50Z7i3cY6HQdyKyeSTA==");
