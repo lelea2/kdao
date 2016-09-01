@@ -20,18 +20,18 @@ var api = new LoneWolf({
 // });
 
 
-// api.getClassifications().then(function(result) {
-//   var arr = [];
-//   if (result.length > 0) {
-//     for (var i = 0; i < result.length; i++) {
-//       if (!!result[i].LWCompanyCode) {
-//         arr.push(result[i]);
-//       }
-//     }
-//     console.log(">>>>>>>>>>>>>>>> Classification <<<<<<<<<<<<<<<<<<");
-//     console.log(arr);
-//   }
-// });
+api.getClassifications().then(function(result) {
+  var arr = [];
+  if (result.length > 0) {
+    for (var i = 0; i < result.length; i++) {
+      if (!!result[i].LWCompanyCode) {
+        arr.push(result[i]);
+      }
+    }
+    console.log(">>>>>>>>>>>>>>>> Classification <<<<<<<<<<<<<<<<<<");
+    console.log(arr);
+  }
+});
 
 
 // api.getPropertyTypes().then(function(result) {
@@ -62,5 +62,12 @@ var api = new LoneWolf({
 
 
 api.getTransactions().then(function(result) {
-  console.log(result);
+  console.log(">>>>>>>>>>>>>>>> Transactions <<<<<<<<<<<<<<<<<<");
+  var arr = [];
+  for (var i = 0; i < result.length; i++) {
+    if (/*result[i].Classification.EndCount  === 1 && */ result[i].MLSAddress.StreetNumber === '40') {//< 2) {
+      arr.push(result[i]);
+    }
+  }
+  console.log(arr);
 });
