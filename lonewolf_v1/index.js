@@ -47,6 +47,11 @@ var api = new LoneWolf({
 //   }
 // });
 
+api.getMembers().then(function(result) {
+  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>> Get Members <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+  console.log(result);
+});
+
 api.getContactTypes().then(function(result) {
   var arr = [];
   if (result.length > 0) {
