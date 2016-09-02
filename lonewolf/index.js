@@ -29,7 +29,7 @@ function getUser(event, context) {
   var all_flag = (id === 'all') ? true : false;
   var uri = '';
   if (all_flag === true) { //Get all members
-    uri = '/wolfconnect/members/v1/';
+    uri = '/wolfconnect/members/v1/?$filter=Title eq \'Agent\'))';
   } else {
     uri = '/wolfconnect/members/v1/?$filter=Number eq \'' + id + '\'))';
   }
@@ -103,7 +103,7 @@ function deleteTransaction(transactionId) {
   });
 }
 
-// getUser({params: {id: 'all'}}, context);
+getUser({params: {id: 'all'}}, context);
 // getTransactions(null, context);
-getFilterTransaction('443624');
+// getFilterTransaction('443624');
 // deleteTransaction("9Eo50Z7i3cY6HQdyKyeSTA==");
