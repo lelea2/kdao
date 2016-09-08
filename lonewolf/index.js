@@ -29,7 +29,7 @@ function getUser(event, context) {
   var all_flag = (id === 'all') ? true : false;
   var uri = '';
   if (all_flag === true) { //Get all members
-    uri = '/wolfconnect/members/v1/?$filter=Title eq \'Agent\'))';
+    uri = '/wolfconnect/members/v1/?$filter=Title eq \'agent\'))';
   } else {
     uri = '/wolfconnect/members/v1/?$filter=Number eq \'' + id + '\'))';
   }
