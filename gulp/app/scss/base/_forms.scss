@@ -1,0 +1,46 @@
+// default form styling
+form {
+  @include reset;
+}
+
+fieldset {
+  margin: 0 0 1em 0;
+  border: 0 none;
+}
+
+input, textarea, select {
+  padding: 2px 4px;
+  color: $color-text;
+  background-color: transparent;
+  border: 2px solid $color-text;
+  outline: 0;
+  box-shadow: none;
+}
+
+button, a.button {
+  display: block;
+  width: 12em;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2.75;
+  margin: 0.5em auto;
+  color: $color-main;
+  background-color: transparent;
+  border: 2px solid $color-main;
+  cursor: pointer;
+  outline: 0;
+  box-shadow: none;
+
+  &:link, &:visited {
+    color: $color-main;
+    border: 2px solid $color-main;
+  }
+
+  &:hover, &:focus, &:active {
+    color: $color-light;
+    border-color: $color-light;
+  }
+}

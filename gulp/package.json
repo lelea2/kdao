@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "node-sass": "^3.9.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-deporder": "^1.0.0",
+    "gulp-htmlclean": "^2.2.3",
+    "gulp-imacss": "^0.3.0",
+    "gulp-imagemin": "^1.2.1",
+    "gulp-jshint": "^1.9.0",
+    "gulp-newer": "^0.3.0",
+    "gulp-pleeease": "^1.0.4",
+    "gulp-preprocess": "^1.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^1.1.0",
+    "gulp-strip-debug": "^1.0.1",
+    "gulp-uglify": "^1.0.1"
+  }
+}
