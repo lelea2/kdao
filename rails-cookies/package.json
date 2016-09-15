@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^2.0.0",
+    "rails-cookie-parser": "0.0.3"
+  }
+}
