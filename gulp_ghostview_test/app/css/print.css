@@ -1,0 +1,14 @@
+body {
+  /* this affects the margin on the content before sending to printer */
+  margin: 10px; }
+
+.printable-list {
+  list-style-type: none;
+  margin: 10px;
+  padding: 0; }
+  .printable-list li {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px; }
+
+.print-btn {
+  display: none; }
