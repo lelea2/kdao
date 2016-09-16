@@ -99,7 +99,7 @@ gulp.task('concat_vendor', function() {
 });
 
 //Concat vendor (run after copy-js-vendor)
-gulp.task('concat', function() {
+gulp.task('concat_external', function() {
   runSequence(
     'copy_vendor',
     'copy-js-vendor',
@@ -126,7 +126,18 @@ gulp.task('sass', function(){
 /****************************************************************************************/
 
 
-gulp.task('build', ['sass', 'concat']);// 'concat']);
-gulp.task('default', ['build']);
+/****************************************************************************************/
+/**********************************  Working files changed ******************************/
+/****************************************************************************************/
+gulp.task('watch', function() {
+  //gulp.watch('assets/js/src/*.{js,jsx}', ['concat']);
+  gulp.watch('assets/sass/**/*.scss', ['sass']);
+});
 
-//gulp.task('default', ['build', 'browsersync', 'watch']);
+/****************************************************************************************/
+
+
+
+gulp.task('build', ['sass', 'concat_external']);// 'concat']);
+gulp.task('default', ['build', 'browserSync', 'watch']);
+
