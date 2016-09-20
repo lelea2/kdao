@@ -1,0 +1,23 @@
+.global-header {
+  position: relative;
+}
+
+.global-header .inner {
+  padding: 10px;
+}
+
+.page1 a {
+  color: red;
+}
+
+.page2 span {
+  color: red;
+}
+
+.page2 img.icon {
+  background-image: url("waka.png");
+}
+
+.app {
+  color: black;
+}
