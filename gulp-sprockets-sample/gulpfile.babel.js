@@ -38,6 +38,7 @@ gulp.task('build:css', () => {
 
 gulp.task('build:js', () => {
   return gulp.src([assetsPaths.app + '/javascripts/*.js'])
+    .pipe($.babel())
     .pipe(sprockets.js())
     .pipe($.if(release, sprockets.precompile()))
     .pipe(gulp.dest(destPath))
