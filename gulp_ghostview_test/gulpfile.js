@@ -79,7 +79,9 @@ gulp.task('copy_vendor', ['copy-react', 'copy-react-dom', 'copy-jquery'], functi
 var vendorJSFiles = [
   'dist/js/vendor/jquery.js',
   'dist/js/vendor/react.js',
-  'dist/js/vendor/react-dom.js'
+  'dist/js/vendor/react-dom.js',
+  'app/js/src/utility',
+  'app/js/src/shared_components/rs_input.js.jsx'
 ];
 
 gulp.task('copy-js-vendor', function() {
@@ -135,7 +137,6 @@ gulp.task('watch', function() {
 });
 
 /****************************************************************************************/
-
 
 
 gulp.task('build', ['sass', 'concat_external']);// 'concat']);

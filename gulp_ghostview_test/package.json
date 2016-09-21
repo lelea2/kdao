@@ -4,7 +4,7 @@
   "description": "Gulp test for Reesio migration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp"
   },
   "author": "Khanh Dao <kareendao88@gmail.com>",
   "license": "ISC",
