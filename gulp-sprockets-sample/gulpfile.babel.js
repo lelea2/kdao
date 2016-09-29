@@ -4,7 +4,11 @@ import sprockets from 'gulp-sprockets';
 import del from 'del';
 import runSequence from 'run-sequence';
 
+import debug from 'gulp-debug';
+import uglify from 'gulp-uglify';
+const using = require('gulp-using');
 const $ = gulpLoadPlugins({ lazy: false });
+
 const assetsPaths = {
   app: "./app/assets",
   javascripts: [],
@@ -36,22 +40,33 @@ gulp.task('build:css', () => {
     .pipe(gulp.dest(destPath))
 });
 
-gulp.task('build:js', () => {
-  return gulp.src([assetsPaths.app + '/javascripts/*.js'])
-    .pipe($.babel())
-    .pipe(sprockets.js())
-    .pipe($.if(release, sprockets.precompile()))
-    .pipe(gulp.dest(destPath))
-});
-
 
 /**
  * ES6
  */
-
+var transformDest = './app/assets/javascripts/react_components_transform';
+console.log(">>>>>>> transformDest: " + transformDest);
 gulp.task('build:es6', () => {
-  return gulp.src([assetsPaths.app + '/javascripts/roots/*.js'])
-    .pipe($.babel())
+  console.log('>>>>>>>>>>>>>>> transform jsx');
+  return gulp.src([assetsPaths.app + '/javascripts/react_components/views/**/*.jsx'])
+    .pipe(debug({}))
+    .pipe(using({}))
+    .pipe($.babel({
+      presets: ['es2015', 'react']
+    }))
+    .pipe(uglify({}))
+    .pipe($.if(release, sprockets.precompile()))
+    .pipe(gulp.dest(transformDest))
+});
+
+console.log(sprockets.js());
+
+gulp.task('build:js', () => {
+  console.log('>>>>>>>>>> build js <<<<<<<<<<<<<<<')
+  return gulp.src([assetsPaths.app + '/javascripts/*.js'])
+    .pipe(using({}))
+    .pipe(sprockets.js())
+    .pipe(uglify({}))
     .pipe($.if(release, sprockets.precompile()))
     .pipe(gulp.dest(destPath))
 });
@@ -82,7 +97,8 @@ gulp.task('default', () => {
   runSequence(
       'clean',
       'build:image',
-      ['build:css', 'build:js', 'build:scss', 'build:es6']);
+      'build:es6',
+      ['build:css', 'build:js', 'build:scss']);
 });
 
 gulp.task('watch', ['default'], () => {
