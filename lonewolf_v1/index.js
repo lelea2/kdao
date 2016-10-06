@@ -52,18 +52,18 @@ var api = new LoneWolf({
 //   console.log(result);
 // });
 
-api.getContactTypes().then(function(result) {
-  var arr = [];
-  if (result.length > 0) {
-    for (var i = 0; i < result.length; i++) {
-      if (!!result[i].LWCompanyCode) {
-        arr.push(result[i]);
-      }
-    }
-    console.log(">>>>>>>>>>>>>>>> Contact Type <<<<<<<<<<<<<<<<<<");
-    console.log(arr);
-  }
-});
+// api.getContactTypes().then(function(result) {
+//   var arr = [];
+//   if (result.length > 0) {
+//     for (var i = 0; i < result.length; i++) {
+//       if (!!result[i].LWCompanyCode) {
+//         arr.push(result[i]);
+//       }
+//     }
+//     console.log(">>>>>>>>>>>>>>>> Contact Type <<<<<<<<<<<<<<<<<<");
+//     console.log(arr);
+//   }
+// });
 
 
 api.getTransactions().then(function(result) {
@@ -74,5 +74,5 @@ api.getTransactions().then(function(result) {
       arr.push(JSON.stringify(result[i]));
     }
   }
-  console.log(arr);
+  console.log(arr[0]);
 });
