@@ -59,7 +59,7 @@ gulp.task('build:es6', () => {
     .pipe(gulp.dest(transformDest))
 });
 
-console.log(sprockets.js());
+// console.log(sprockets.js());
 
 gulp.task('build:js', () => {
   console.log('>>>>>>>>>> build js <<<<<<<<<<<<<<<')

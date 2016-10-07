@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Poll</title>
+  <link rel="stylesheet" href="css/general.css" type="text/css" media="screen" title="no title" />
+  <link rel="stylesheet" href="css/poll.css" type="text/css" media="screen" title="no title" />
+  <!--[if lt IE 9]>
+    <script src="javascripts/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header class="header">
+  </header>
+
+  <section class="content">
+    <div class="wrap">
+      <h1>
+        Animated Poll Results
+        <span class="note">Click on "Submit" button to see poll results</span>
+      </h1>
+      <div class="poll-block">
+        <h2>What browser you use every day?</h2>
+        <ul class="poll-vote-list">
+          <li class="clearfix">
+            <input id="poll-choice1" type="radio" name="radio">
+            <label for="poll-choice1">Internet Explorer 8</label>
+          </li>
+          <li class="clearfix">
+            <input id="poll-choice2" type="radio" name="radio">
+            <label for="poll-choice2">Internet Explorer 9</label>
+          </li>
+          <li class="clearfix">
+            <input id="poll-choice3" type="radio" name="radio">
+            <label for="poll-choice3">Internet Explorer 10</label>
+          </li>
+          <li class="clearfix">
+            <input id="poll-choice4" type="radio" name="radio">
+            <label for="poll-choice4">Google Chrome</label>
+          </li>
+          <li class="clearfix">
+            <input id="poll-choice5" type="radio" name="radio">
+            <label for="poll-choice5">Firefox</label>
+          </li>
+        </ul>
+        <ul class="poll-results-list">
+          <li>
+            <div class="clearfix">
+              <span class="respond">Internet Explorer 8</span>
+              <span class="percentage">8%</span>
+            </div>
+            <div class="out-bar">
+              <div class="inner-bar"></div>
+            </div>
+          </li>
+          <li>
+            <div class="clearfix">
+              <span class="respond">Internet Explorer 9</span>
+              <span class="percentage">9%</span>
+            </div>
+            <div class="out-bar">
+              <div class="inner-bar"></div>
+            </div>
+          </li>
+          <li>
+            <div class="clearfix">
+              <span class="respond">Internet Explorer 10</span>
+              <span class="percentage">12%</span>
+            </div>
+            <div class="out-bar">
+              <div class="inner-bar"></div>
+            </div>
+          </li>
+          <li>
+            <div class="clearfix">
+              <span class="respond">Google Chrome</span>
+              <span class="percentage">56%</span>
+            </div>
+            <div class="out-bar">
+              <div class="inner-bar nul"></div>
+            </div>
+          </li>
+          <li>
+            <div class="clearfix">
+              <span class="respond">Firefox</span>
+              <span class="percentage">15%</span>
+            </div>
+            <div class="out-bar">
+              <div class="inner-bar"></div>
+            </div>
+          </li>
+        </ul>
+        <div class="vote-button clearfix">
+          <a class="results-trigger btn btn-custom" href="#"><span>Submit</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/poll.js"></script>
+</body>
+</html>
+

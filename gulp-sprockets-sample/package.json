@@ -10,8 +10,6 @@
     "build": "gulp",
     "watch": "gulp watch"
   },
-  "author": "yo_waka",
-  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.2.1",
