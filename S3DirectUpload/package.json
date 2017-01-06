@@ -1,0 +1,12 @@
+{
+  "name": "NodeDirectUploader",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "aws-config": "^1.1.0",
+    "aws-sdk": "2.x",
+    "dotenv": "^2.0.0",
+    "ejs": "2.x",
+    "express": "4.x"
+  }
+}
