@@ -17,8 +17,6 @@
       <input type="hidden" id="avatar-url" name="avatar-url" value="/images/default.png">
       <input type="text" name="username" placeholder="Username"><br>
       <input type="text" name="full-name" placeholder="Full name"><br><br>
-
-      <hr>
       <h2>Save changes</h2>
 
       <input type="submit" value="Update profile">
@@ -59,6 +57,7 @@
         if(xhr.readyState === 4){
           if(xhr.status === 200){
             const response = JSON.parse(xhr.responseText);
+            console.log(response);
             uploadFile(file, response.signedRequest, response.url);
           }
           else{
