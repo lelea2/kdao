@@ -32,8 +32,8 @@
       const xhr = new XMLHttpRequest();
       xhr.open('PUT', signedRequest);
       xhr.onreadystatechange = () => {
-        if(xhr.readyState === 4){
-          if(xhr.status === 200){
+        if(xhr.readyState === 4) {
+          if(xhr.status === 200) {
             document.getElementById('preview').src = url;
             document.getElementById('avatar-url').value = url;
           }

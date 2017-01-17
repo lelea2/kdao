@@ -3,11 +3,14 @@
 require('dotenv').load();
 
 var LoneWolf = require('lone-wolf');
+// console.log(process.env);
 var api = new LoneWolf({
     apiToken: process.env.LW_API_TOKEN,
-    clientCode: process.env.LW_CLIENTCODE,
+    clientCode: 'NOV701', //process.env.LW_CLIENTCODE,
     secretKey: process.env.LW_SECRET_KEY
 });
+
+// console.log(api);
 
 // api.getTransactions().then(function(result) {
 //   console.log(result);
@@ -70,9 +73,12 @@ api.getTransactions().then(function(result) {
   console.log(">>>>>>>>>>>>>>>> Transactions <<<<<<<<<<<<<<<<<<");
   var arr = [];
   for (var i = 0; i < result.length; i++) {
-    if (/*result[i].Classification.EndCount  === 1 && */ result[i].Id === 'QzOhr7xxvWUnFpiTjAbebg==') {//< 2) {
+    if (/*result[i].Classification.EndCount  === 1 && */ result[i].Id === '41_izV00dh-GkuITUEg6dw==') {//< 2) {
       arr.push(JSON.stringify(result[i]));
+      console.log(JSON.stringify(result[i]));
     }
   }
-  console.log(arr[0]);
+  console.log(arr.length);
+}, function(err) {
+  console.log(err);
 });
