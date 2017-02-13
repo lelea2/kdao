@@ -7,3 +7,4 @@ requirements.txt
 services
 setup.py
 venv
+*.zip
