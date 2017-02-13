@@ -1,0 +1,16 @@
+{
+  "name": "listenup-solution",
+  "version": "0.0.1",
+  "description": "Parallel call for listen up api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Khanh Dao",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.x",
+    "nodemon": "^1.11.0",
+    "request": "^2.79.0"
+  }
+}
