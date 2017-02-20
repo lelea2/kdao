@@ -6,7 +6,7 @@ var LoneWolf = require('lone-wolf');
 // console.log(process.env);
 var api = new LoneWolf({
     apiToken: process.env.LW_API_TOKEN,
-    clientCode: '', //process.env.LW_CLIENTCODE,
+    clientCode: process.env.LW_CLIENT_CODE,
     secretKey: process.env.LW_SECRET_KEY
 });
 
@@ -50,23 +50,23 @@ var api = new LoneWolf({
 //   }
 // });
 
-// api.getMembers().then(function(result) {
-//   console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>> Get Members <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-//   console.log(result);
-// });
-
-api.getContactTypes().then(function(result) {
-  var arr = [];
-  if (result.length > 0) {
-    for (var i = 0; i < result.length; i++) {
-      // if (!!result[i].LWCompanyCode) {
-        arr.push(result[i]);
-      // }
-    }
-    console.log(">>>>>>>>>>>>>>>> Contact Type <<<<<<<<<<<<<<<<<<");
-    console.log(arr);
-  }
+api.getMembers().then(function(result) {
+   console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>> Get Members <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+   console.log(result);
 });
+
+// api.getContactTypes().then(function(result) {
+//   var arr = [];
+//   if (result.length > 0) {
+//     for (var i = 0; i < result.length; i++) {
+//       // if (!!result[i].LWCompanyCode) {
+//         arr.push(result[i]);
+//       // }
+//     }
+//     console.log(">>>>>>>>>>>>>>>> Contact Type <<<<<<<<<<<<<<<<<<");
+//     console.log(arr);
+//   }
+// });
 
 
 // api.getTransactions().then(function(result) {
