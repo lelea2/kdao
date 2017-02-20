@@ -30,7 +30,8 @@ app.use(express.static('./public'));
 
 app.post('/api', (req, res) => {
   console.log(req.body);
-  fs.writeFile("./public/khanh.jpg", req.body, 'binary', function(err) {
+  var ts = Math.ceil(new Date().getTime() / 1000);
+  fs.writeFile('./public/khanh' + ts + '.jpg', req.body, 'binary', function(err) {
     console.log(err); // writes out file without error, but it's not a valid image
   });
   res.status(200).json({data: 'test'});
@@ -59,9 +60,19 @@ app.get('/property/:image_path', (req, res) => {
       console.log('height = ' + size.height);
       res.status(200).json(size);
     } else {
-      res.status(500).json({
-        error: err
-      });
+      res.status(500).send(err);
+    }
+  });
+});
+
+app.delete('/property/:image_path', (req, res) => {
+  fs.unlink('./public/' + req.params.image_path, (err) => {
+    if (err) {
+      return console.log(err);
+      res.status(500).send(err);
+    } else {
+      console.log('file deleted successfully');
+      res.status(200).json({});
     }
   });
 });
