@@ -1,18 +1,17 @@
 from flask import Flask, render_template
+import cv2
 from PIL import Image
 import numpy as np
-import cStringIO as StringIO
 
 app = Flask(__name__)
 
 @app.route('/api', methods = ['POST'])
 def api_message():
   if request.headers['Content-Type'] == 'application/octet-stream':
-    stream = StringIO.StringIO(request.data)
-    img = Image.open(stream)
-    img = np.array(img)
-    im = Image.fromarray(img)
-    im.save("static/test2.jpg")
+    nparr = np.fromstring(request.data, np.uint8)
+    img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+    im = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+    im.save("static/images/test2.jpg")
 
 @app.route("/")
 def hello():
