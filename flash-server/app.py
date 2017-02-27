@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import os
-#import cv2
-#from PIL import Image
+import cv2
+from PIL import Image
 import numpy as np
 
 app = Flask(__name__)

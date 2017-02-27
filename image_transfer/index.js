@@ -30,11 +30,32 @@ app.use(express.static('./public'));
 
 app.post('/api', (req, res) => {
   console.log(req.body);
+  var query = req.query;
+  var top = query.top;
+  var left = query.left;
+  var right = query.right;
+  var bottom = query.bottom;
   var ts = Math.ceil(new Date().getTime() / 1000);
-  fs.writeFile('./public/khanh' + ts + '.jpg', req.body, 'binary', function(err) {
+  var newFile = './public/khanh' + ts + '.jpg';
+  fs.writeFile(newFile, req.body, 'binary', function(err) {
     console.log(err); // writes out file without error, but it's not a valid image
+    if (err) {
+      res.status(500).send(err);
+    } else { //writing new image successfully
+      var pic = gm(newFile);
+      pic.stroke('#FFB6C1', 3);
+      pic.fill('transparent');
+      pic.drawRectangle(top, left, bottom, right);
+      pic.write('./public/tmp/output' + ts + '.jpg', function(err) {
+        if (err) {
+          console.log(err);
+          res.status(500).send(err)
+        } else {
+          res.status(200).send('done');
+        }
+      });
+    }
   });
-  res.status(200).json({data: 'test'});
 });
 
 app.get('/', (req, res) => {
@@ -73,6 +94,21 @@ app.delete('/property/:image_path', (req, res) => {
     } else {
       console.log('file deleted successfully');
       res.status(200).json({});
+    }
+  });
+});
+
+app.get('/test', (req, res) => {
+  var pic = gm('./public/image.png');
+  pic.stroke('#FFB6C1', 3);
+  pic.fill('transparent');
+  pic.drawRectangle(30, 40, 200, 400);
+  pic.write('./public/tmp/output.png', function(err) {
+    if (err) {
+      console.log(err);
+      res.status(500).send(err)
+    } else {
+      res.status(200).send('done');
     }
   });
 });
