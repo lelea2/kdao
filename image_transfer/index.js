@@ -38,8 +38,8 @@ app.post('/api', (req, res) => {
   var ts = Math.ceil(new Date().getTime() / 1000);
   var newFile = './public/khanh' + ts + '.jpg';
   fs.writeFile(newFile, req.body, 'binary', function(err) {
-    console.log(err); // writes out file without error, but it's not a valid image
     if (err) {
+      console.log(err); // writes out file without error, but it's not a valid image
       res.status(500).send(err);
     } else { //writing new image successfully
       var pic = gm(newFile);
