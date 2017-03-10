@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Spam Checker</title>
     <style>
       .result {
         background: #ffe9ec;
         border: 1px solid #ff8396;
         padding: 10px;
+        width: 600px;
+        margin: 15px 0;
       }
       button {
         background: #ff6a80;
@@ -33,24 +36,9 @@
     <script src='https://code.jquery.com/jquery-2.2.4.js'></script>
     <script type='text/javascript'>
       function checkSpam() {
-        // e.preventDefault();
-        $.ajax({
-          beforeSend: function(xhrObj){
-            xhrObj.setRequestHeader('Content-Type','application/json');
-            xhrObj.setRequestHeader('Accept','application/json');
-          },
-          type: 'POST',
-          url: '/checkspam',
-          data: JSON.stringify({
-            content: 'test' //encodeURIComponent($('#email-content').val())
-          }),
-          type: 'json',
-          success: function(data) {
-            console.log(data);
-          },
-          error: function(err) {
-            console.log(err);
-          }
+        $.post('/checkspam', {content: $('#email-content').val()}, function(data) {
+          console.log(data);
+          $('.result').html(JSON.stringify(data));
         });
       }
 

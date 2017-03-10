@@ -28,15 +28,18 @@ app.get('/checkspam', (req, res) => res.render('index.html'));
 
 app.post('/checkspam', (req, res) => {
   console.log('>>>> Check spam <<<<<<');
-  console.log(req);
-  res.status(200).json({});
-  // axios({
-  //   method: 'post',
-  //   url: 'http://spamcheck.postmarkapp.com/filter',
-  //   data: req.body.content
-  // }).then((response) => {
-  //   res.status(200).json(response);
-  // }).catch((err) => {
-  //   res.status(500).send(err);
-  // });
+  // console.log(req.body);
+  console.log(req.body.content);
+  axios.post('http://spamcheck.postmarkapp.com/filter', {
+    email: 'Fred',
+    options: 'long'
+  })
+  .then(function (response) {
+    console.log(response.data);
+    res.status(200).json(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+    res.status(500).json({err: error});
+  });
 });
