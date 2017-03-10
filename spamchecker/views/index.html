@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spam Checker</title>
+    <style>
+      .result {
+        background: #ffe9ec;
+        border: 1px solid #ff8396;
+        padding: 10px;
+      }
+      button {
+        background: #ff6a80;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+        border: 1px solid #eee;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Spam Checker</h1>
+    <div class='result'></div>
+    <textarea id='email-content' placeholder='Email Body Content' rows='20' cols='65'></textarea>
+    <div>
+      <button onClick="checkSpam()">Check Spam</button>
+      <button onClick="reset()">Reset</button>
+    </div>
+    <script src='https://code.jquery.com/jquery-2.2.4.js'></script>
+    <script type='text/javascript'>
+      function checkSpam() {
+        // e.preventDefault();
+        $.ajax({
+          beforeSend: function(xhrObj){
+            xhrObj.setRequestHeader('Content-Type','application/json');
+            xhrObj.setRequestHeader('Accept','application/json');
+          },
+          type: 'POST',
+          url: '/checkspam',
+          data: JSON.stringify({
+            content: 'test' //encodeURIComponent($('#email-content').val())
+          }),
+          type: 'json',
+          success: function(data) {
+            console.log(data);
+          },
+          error: function(err) {
+            console.log(err);
+          }
+        });
+      }
+
+      function reset(e) {
+        $('#email-content').val('');
+        $('.result').html('');
+      }
+    </script>
+  </body>
+</html>
