@@ -1,0 +1,15 @@
+{
+  "name": "claudia-serverless-api",
+  "version": "0.0.1",
+  "description": "Building serverless api with claudia",
+  "main": "index.js",
+  "scripts": {
+    "start": "claudia create --name claudia-serverless-api-example --region us-east-1 --api-module index",
+    "deploy": "claudia update"
+  },
+  "author": "Khanh Dao",
+  "license": "ISC",
+  "dependencies": {
+    "claudia-api-builder": "^2.4.1"
+  }
+}
