@@ -26,7 +26,7 @@ var findEmail = (str) => {
   return '';
 };
 
-var token = '0bxNRQMF21C5Yq04sxCwWVoDR8KBw7RJfpMixPTY7UDA-';
+var token = '';
 var base_url = `https://www.scalyr.com/api/query?queryType=log&token=${token}&filter=%22Sent%20mail%20to%22&maxCount=5000`;
 var urls = [
   `${base_url}&startTime=75h&endTime=65h`,
