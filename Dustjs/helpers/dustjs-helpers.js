@@ -37,7 +37,7 @@ module.exports = function (dustjs) {
     };
 
     //Create modular ui component: https://eduardoboucas.com/blog/2016/04/15/creating-modular-ui-components-with-dustjs.html
-    dust.helpers.partial = function (chunk, context, bodies, params) {
+    dustjs.helpers.partial = function (chunk, context, bodies, params) {
         var newContext = {
             $content: bodies.block
         };
@@ -45,7 +45,7 @@ module.exports = function (dustjs) {
     };
 
     //share ui component
-    dust.helpers.uiComponent = function (chunk, context, bodies, params) {
+    dustjs.helpers.uiComponent = function (chunk, context, bodies, params) {
         var name = context.resolve(params.name);
         return chunk.partial('components/' + name + '/' + name, context, params);
     };

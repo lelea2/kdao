@@ -1,0 +1,34 @@
+{
+  "name": "react-dust",
+  "version": "0.0.1",
+  "description": "React & Dust rendering with express",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run browserifymin && node index.js",
+    "browserify": "browserify -t reactify -t require-globify public/index.js -o public/bundle.js",
+    "browserifymin": "browserify -t reactify -t require-globify public/index.js -d -p [minifyify --map /bundle.map.json --output public/bundle.map.json] -o public/bundle.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "browserify": "^14.1.0",
+    "compression": "^1.6.2",
+    "consolidate": "^0.14.5",
+    "dustjs-helpers": "^1.7.3",
+    "dustjs-linkedin": "^2.7.5",
+    "express": "^4.15.2",
+    "history": "^4.6.1",
+    "lru-cache": "^4.0.2",
+    "minifyify": "^7.3.5",
+    "node-jsx": "^0.13.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-engine": "^4.3.0",
+    "react-router": "^4.0.0",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1",
+    "request": "^2.81.0",
+    "require-globify": "^1.4.1"
+  }
+}
