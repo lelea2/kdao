@@ -44,6 +44,12 @@ module.exports = function (dustjs) {
         return chunk.partial(params.$name, context.push(newContext), params);
     };
 
+    //share ui component
+    dust.helpers.uiComponent = function (chunk, context, bodies, params) {
+        var name = context.resolve(params.name);
+        return chunk.partial('components/' + name + '/' + name, context, params);
+    };
+
     dustjs.helpers.arrContains = function(chunk, context, bodies, params) {
         var result = false;
         try {
