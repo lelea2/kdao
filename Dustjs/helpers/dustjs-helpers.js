@@ -36,6 +36,14 @@ module.exports = function (dustjs) {
         return chunk.write(url);
     };
 
+    //Create modular ui component: https://eduardoboucas.com/blog/2016/04/15/creating-modular-ui-components-with-dustjs.html
+    dust.helpers.partial = function (chunk, context, bodies, params) {
+        var newContext = {
+            $content: bodies.block
+        };
+        return chunk.partial(params.$name, context.push(newContext), params);
+    };
+
     dustjs.helpers.arrContains = function(chunk, context, bodies, params) {
         var result = false;
         try {
