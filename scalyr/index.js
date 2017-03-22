@@ -55,11 +55,11 @@ var execute = () => {
         mailArr.push(mail);
       }
     }
-    fs.writeFile("mail.csv", mailArr.join(','), function(err) {
+    fs.writeFile('mail.csv', mailArr.join(','), function(err) {
       if (err) {
         return console.log(err);
       }
-      console.log("The file was saved!");
+      console.log('The file was saved!');
     });
     // console.log(mailArr);
   })

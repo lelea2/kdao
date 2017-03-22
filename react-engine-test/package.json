@@ -1,0 +1,22 @@
+{
+  "name": "react-engine-test",
+  "version": "0.1.0",
+  "description": "a sample express app to demonstrate react-engine integration",
+  "author": "yo react-engine",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run browserify && node index.js",
+    "browserify": "browserify -t reactify -t require-globify public/index.js -o public/bundle.js"
+  },
+  "dependencies": {
+    "browserify": "^9.0.4",
+    "express": "^4.12.3",
+    "node-jsx": "^0.13.3",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-engine": "^4.0.0",
+    "react-router": "^2.4.0",
+    "reactify": "^1.1.0",
+    "require-globify": "^1.1.0"
+  }
+}
