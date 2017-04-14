@@ -30,3 +30,47 @@ worker.on('timeout', function( msg ){
 });
 
 worker.start();
+
+
+//Create queue
+rsmq.createQueue({qname:'myqueue'}, function (err, resp) {
+  if (resp===1) {
+    console.log('queue created');
+  }
+});
+
+//Send a message to queue
+rsmq.sendMessage({qname: 'myqueue', message: 'Hello World'}, function (err, resp) {
+  if (resp) {
+    console.log("Message sent. ID:", resp);
+  }
+});
+
+//Receive messege
+rsmq.receiveMessage({qname: 'myqueue'}, function (err, resp) {
+  if (resp.id) {
+    console.log('Message received.', resp);
+  }
+  else {
+    console.log('No messages for me...');
+  }
+});
+
+// delete message
+// rsmq.deleteMessage({qname: 'myqueue', id: 'dhoiwpiirm15ce77305a5c3a3b0f230c6e20f09b55'}, function (err, resp) {
+//   if (resp===1) {
+//     console.log('Message deleted.')
+//   }
+//   else {
+//     console.log('Message not found.')
+//   }
+// });
+
+//list queue
+rsmq.listQueues( function (err, queues) {
+  if( err ){
+    console.error( err )
+    return
+  }
+  console.log('Active queues: ' + queues.join( ',' ) );
+});
