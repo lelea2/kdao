@@ -2,21 +2,21 @@
 
 var RedisSMQ = require('rsmq');
 var rsmq = new RedisSMQ( {host: '127.0.0.1', port: 6379, ns: 'rsmq'} );
-// var RSMQWorker = require( 'rsmq-worker' );
-// var worker = new RSMQWorker( 'myqueue' );
+var RSMQWorker = require( 'rsmq-worker' );
+var worker = new RSMQWorker( 'myqueue' );
 
-// console.log('testing rsmq');
+console.log('testing rsmq');
 
-// worker.on( 'message', function( msg, next, id ){
-//   // process your message
-//   console.log('Message id : ' + id);
-//   console.log(msg);
-//   next();
-// });
+worker.on( 'message', function( msg, next, id ){
+  // process your message
+  console.log('Message id : ' + id);
+  console.log(msg);
+  next();
+});
 
-// worker.on('ready', function() {
-//   console.log('queue is ready...');
-// });
+worker.on('ready', function() {
+  console.log('queue is ready...');
+});
 
 // // optional error listeners
 // worker.on('error', function( err, msg ){
