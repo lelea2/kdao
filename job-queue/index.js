@@ -2,52 +2,53 @@
 
 var RedisSMQ = require('rsmq');
 var rsmq = new RedisSMQ( {host: '127.0.0.1', port: 6379, ns: 'rsmq'} );
-var RSMQWorker = require( 'rsmq-worker' );
-var worker = new RSMQWorker( 'myqueue' );
+// var RSMQWorker = require( 'rsmq-worker' );
+// var worker = new RSMQWorker( 'myqueue' );
 
-console.log('testing rsmq');
+// console.log('testing rsmq');
 
-worker.on( 'message', function( msg, next, id ){
-  // process your message
-  console.log('Message id : ' + id);
-  console.log(msg);
-  next();
-});
+// worker.on( 'message', function( msg, next, id ){
+//   // process your message
+//   console.log('Message id : ' + id);
+//   console.log(msg);
+//   next();
+// });
 
-worker.on('ready', function() {
-  console.log('queue is ready...');
-});
+// worker.on('ready', function() {
+//   console.log('queue is ready...');
+// });
 
-// optional error listeners
-worker.on('error', function( err, msg ){
-  console.log( 'ERROR', err, msg.id );
-});
-worker.on('exceeded', function( msg ){
-  console.log( 'EXCEEDED', msg.id );
-});
-worker.on('timeout', function( msg ){
-  console.log( 'TIMEOUT', msg.id, msg.rc );
-});
+// // optional error listeners
+// worker.on('error', function( err, msg ){
+//   console.log( 'ERROR', err, msg.id );
+// });
+// worker.on('exceeded', function( msg ){
+//   console.log( 'EXCEEDED', msg.id );
+// });
+// worker.on('timeout', function( msg ){
+//   console.log( 'TIMEOUT', msg.id, msg.rc );
+// });
 
-worker.start();
+// worker.start();
 
 
 //Create queue
-rsmq.createQueue({qname:'myqueue'}, function (err, resp) {
+rsmq.createQueue({qname:'myqueue4'}, function (err, resp) {
+  console.log(err);
+  console.log(resp);
   if (resp===1) {
     console.log('queue created');
-  }
-});
-
-//Send a message to queue
-rsmq.sendMessage({qname: 'myqueue', message: 'Hello World'}, function (err, resp) {
-  if (resp) {
-    console.log("Message sent. ID:", resp);
+    //Send a message to queue
+    rsmq.sendMessage({qname: 'myqueue4', message: 'Hello World'}, function (err, resp) {
+      if (resp) {
+        console.log("Message sent. ID:", resp);
+      }
+    });
   }
 });
 
 //Receive messege
-rsmq.receiveMessage({qname: 'myqueue'}, function (err, resp) {
+rsmq.receiveMessage({qname: 'myqueue4'}, function (err, resp) {
   if (resp.id) {
     console.log('Message received.', resp);
   }
