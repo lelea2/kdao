@@ -1,0 +1,38 @@
+{
+  "extends": ["tslint:latest"],
+  "rules": {
+    "curly": true,
+    "quotemark": false,
+    "no-console": false,
+    "max-classes-per-file": false,
+    "max-line-length": false,
+    "no-var-requires": false,
+    "ordered-imports": false,
+    "member-access": false,
+    "member-ordering": false,
+    "object-literal-sort-keys": false,
+    "forin": false,
+    "prefer-for-of": false,
+    "one-variable-per-declaration": false,
+    "interface-name": false,
+    "one-line": false,
+    "radix": false,
+    "variable-name": [
+      true,
+      "ban-keywords"
+    ],
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "jsx-curly-spacing": false,
+    "indent": [
+      2,
+      true
+    ],
+    "no-debugger": true,
+    "no-trailing-whitespace": true,
+    "no-unused-variable": false
+  },
+  "jsRules": {
+    "curly": true
+  }
+}
