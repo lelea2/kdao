@@ -5,10 +5,12 @@ require('dotenv').load();
 var LoneWolf = require('lone-wolf');
 // console.log(process.env);
 var api = new LoneWolf({
-    apiToken: process.env.LW_API_TOKEN,
-    clientCode: process.env.LW_CLIENT_CODE,
-    secretKey: process.env.LW_SECRET_KEY
+  apiToken: process.env.LW_API_TOKEN,
+  clientCode: process.env.LW_CLIENT_CODE,
+  secretKey: process.env.LW_SECRET_KEY
 });
+
+console.log(api);
 
 // console.log(api);
 

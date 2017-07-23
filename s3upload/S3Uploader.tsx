@@ -1,6 +1,6 @@
 import * as React from 'react';
 import S3UploadUtil from './s3uploadUtil';
-import { ProgressBar } from '../ProgressBar';
+import { ProgressBar } from './ProgressBar';
 
 export interface S3UploaderProps {
   clss?: string;
