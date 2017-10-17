@@ -1,0 +1,15 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "dist",
+    "sourceMap": true
+  },
+  "filesGlob": [
+    "node_modules/@types",
+    "**/*.ts",
+    "!node_modules",
+    "!js/*"
+  ]
+}
