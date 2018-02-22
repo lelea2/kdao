@@ -51,7 +51,7 @@ console.log(formData);
 //Upload successful!  Server responded with: {"status":"success","data":{"file_id":"eb40f02713842fa746b15e2e543f6b52","pages":10}}
 //eb40f02713842fa746b15e2e543f6b52
 
-request('http://api.newocr.com/v1/ocr?key=0b9ce68814269997ba6bdeefc829fd90&file_id=eb40f02713842fa746b15e2e543f6b52&page=2&lang=eng&psm=6', 
+request('http://api.newocr.com/v1/ocr?key=0b9ce68814269997ba6bdeefc829fd90&file_id=eb40f02713842fa746b15e2e543f6b52&page=10&lang=eng&psm=6', 
   (error, response, body) => {
     if (error) {
       return console.error('upload failed:', error);
