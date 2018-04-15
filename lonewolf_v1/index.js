@@ -25,18 +25,18 @@ console.log(api);
 // });
 
 
-// api.getClassifications().then(function(result) {
-//   var arr = [];
-//   if (result.length > 0) {
-//     for (var i = 0; i < result.length; i++) {
-//       if (!!result[i].LWCompanyCode) {
-//         arr.push(result[i]);
-//       }
-//     }
-//     console.log(">>>>>>>>>>>>>>>> Classification <<<<<<<<<<<<<<<<<<");
-//     console.log(arr);
-//   }
-// });
+ api.getClassifications().then(function(result) {
+   var arr = [];
+   if (result.length > 0) {
+     for (var i = 0; i < result.length; i++) {
+       if (!!result[i].LWCompanyCode) {
+         arr.push(result[i]);
+       }
+     }
+     console.log(">>>>>>>>>>>>>>>> Classification <<<<<<<<<<<<<<<<<<");
+     console.log(arr);
+   }
+});
 
 
 // api.getPropertyTypes().then(function(result) {
